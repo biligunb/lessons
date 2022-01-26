@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Day #8</title>
+    <style>
+      .button {
+        color: green;
+        text-align: center;
+        width: 180px;
+      }
+    </style>
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      function ajaxCall() {      
+        const task = document.getElementById('task').value;
+        const definition = document.getElementById('definition').value;
+
+        $.ajax({
+          url: 'http://localhost:3000/add',
+          type: "POST",
+          data: JSON.stringify({
+            task: task,
+            definition: definition
+          }),
+          contentType: "application/json; charset=utf-8",
+          success: function (data) {
+            var x = JSON.stringify(data);
+            console.log(x);
+          },
+          error: function (error) { console.log(`Error ${error}`); }
+        });
+      }
+    </script>
+  </head>
+<body>
+  <h1>Add new todo</h1>
+  <input type="text" id="task" name="task" placeholder="Task name #1"/>
+  <input type="text" id="definition" name="definition" placeholder="something about task"/>
+  <button class="button" onclick="ajaxCall()">Send</button>
+
+  <hr>
+
+  <div class="container">
+    <hr>
+      <h1>List of todos</h1>
+    <hr>
+    <div>
+      <div class="row" id="todos"></div>
+    </div>
+  </div>
+
+  <script src="./day6.js"></script>
+</body>
+</html>

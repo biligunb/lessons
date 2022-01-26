@@ -1,0 +1,93 @@
+{
+  "id": "88d07291-d99d-41a0-9e37-1b8fd95376d1",
+  "version": "2.0",
+  "name": "Day8",
+  "url": "http://localhost:8080",
+  "tests": [{
+    "id": "a4221701-b2e3-4c8f-9c67-f7d7d57c79e6",
+    "name": "Day8 add todo",
+    "commands": [{
+      "id": "6e306421-98f6-4a53-b2c3-27cb2a1c841a",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0c2ba6b3-dec0-447f-b758-8bed7a0782d9",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1108x780",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c0aef8ca-0bca-43e8-827f-5fbfeb48f1cc",
+      "comment": "",
+      "command": "click",
+      "target": "id=task",
+      "targets": [
+        ["id=task", "id"],
+        ["name=task", "name"],
+        ["css=#task", "css:finder"],
+        ["xpath=//input[@id='task']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ae3cf324-f35a-4fdc-813b-988c109fae15",
+      "comment": "",
+      "command": "type",
+      "target": "id=task",
+      "targets": [
+        ["id=task", "id"],
+        ["name=task", "name"],
+        ["css=#task", "css:finder"],
+        ["xpath=//input[@id='task']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Day 8 task"
+    }, {
+      "id": "ced66bcd-192e-4033-b4c1-cd4bbfcdba16",
+      "comment": "",
+      "command": "type",
+      "target": "id=definition",
+      "targets": [
+        ["id=definition", "id"],
+        ["name=definition", "name"],
+        ["css=#definition", "css:finder"],
+        ["xpath=//input[@id='definition']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "using SeleniumIDE"
+    }, {
+      "id": "8786ca1f-a0c0-43e2-a310-d460e887e2f4",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6614a86a-f2e1-4a91-a9d8-b90ebdf90267",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-4:nth-child(5) .card-title",
+      "targets": [
+        ["css=.col-4:nth-child(5) .card-title", "css:finder"],
+        ["xpath=//div[@id='todos']/div[5]/div/div/h5", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div/h5", "xpath:position"],
+        ["xpath=//h5[contains(.,'Day 8 task')]", "xpath:innerText"]
+      ],
+      "value": "Day 8 task"
+    }]
+  }],
+  "suites": [{
+    "id": "eaead811-ca97-4a42-b8fb-6a748b479cfd",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["a4221701-b2e3-4c8f-9c67-f7d7d57c79e6"]
+  }],
+  "urls": ["http://localhost:8080/"],
+  "plugins": []
+}

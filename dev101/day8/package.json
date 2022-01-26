@@ -1,0 +1,18 @@
+{
+  "scripts": {
+    "test": "jest --coverage=true --forceExit"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "jest": "^27.4.7",
+    "superagent": "^7.1.1",
+    "supertest": "^6.2.2"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "http-server": "^14.1.0",
+    "mysql": "^2.18.1"
+  }
+}
